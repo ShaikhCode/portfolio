@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header h1 {
+    color: #00ff00; /* Green header color */
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+   width:90%
+
+}
+/* Card Styling */
+.card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    color: #00ff00;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #ccc;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #00ff00;
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #00ff00;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ff00;
+    }
+    100% {
+        box-shadow: 0 0 5px #00ff00;
+    }
+}
+
+.card:hover {
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Responsiveness */
+
+/* For tablets and smaller devices */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 15px;
+        max-width: 280px;
+    }
+}
