@@ -1,1 +1,112 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Background and Text Styling */
+body {
+    background: linear-gradient(45deg, #000000, #1a1a1a); /* Black gradient */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #32CD32; /* Maintxt in green */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+#t3{
+ width:90%;
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    
+    
+}
+
+/* Card Styling */
+.project-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #222;
+    padding: 3px 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-card img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: filter 0.4s ease;
+}
+
+.project-card h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5em;
+    color: #32CD32; /* Green text */
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* Description Overlay */
+.project-card .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 1em;
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Hover Effects */
+.project-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0px 0px 20px #00ff00;
+    animation: glow 1.5s infinite alternate;
+    h2{
+    display:none;
+}
+}
+
+.project-card:hover img {
+    filter: blur(5px);
+}
+
+.project-card:hover .description {
+    opacity: 1;
+    transform: translateY(0);
+}
