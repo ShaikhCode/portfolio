@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Project Landing Page</title>
+    <link rel="stylesheet" href="ab.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<style>
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color:black
+}
+</style>
+
+</head>
+<body>
+   <div id="particles-js"></div>
+    <div class="landing-page">
+        <h1>Welcome to My Projects</h1>
+        <div class="project-container">
+
+            <!-- Card 1 -->
+            <div class="project-card" data-url="card/achievement/achievement.html">
+                <img src="img/Achievement.png" alt="Task1 Image">
+                <h2> Achivement </h2>
+                <div class="description">This is about what achievement i enrolled like hackathon code Verse and more . Click to see my certificate!</div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="project-card" data-url="https://shaikhcode.github.io/project/">
+                <img src="img/Project.png" alt="Task2 Image">
+                <h2>My Project</h2>
+                <div class="description">This is about My build Project and some are on-going there many Creative and fully animated project also. Click to see the project!</div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="project-card" data-url="card/skill/skills.html">
+                <img src="img/Skills.png" alt="Task3 Image" id="t3">
+                <h2>My Skills</h2>
+                <div class="description">This is about My knowledge about language and technology i learning or learn. Click to see my skill!</div>
+            </div>
+   
+             <!-- Card 4 -->
+           <div class="project-card" data-url="../hire.html">
+                <img src="img/Contact.gif" alt="task 4 Image">
+                <h2>Contact details</h2>
+                <div class="description">This is about Contact details like email and Instagram I'd. Click to see the details!</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="ab.js"></script>
+    <script>
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#08d665"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#08d665",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+</script>
+
+</body>
+</html>
